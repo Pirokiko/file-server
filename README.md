@@ -3,6 +3,15 @@ Simply a server to manage files. Files are referenced by a uuid v4.
 This project manages your uploaded files, so file upload isn't everywhere inside your project code.
 An uuid v4 is the only needed reference to use the file.
 
+## Installation
+
+```
+git clone https://github.com/Pirokiko/file-server
+cd file-server
+composer install
+php bin/console doctrine:migrations:migrate
+```
+
 ## Goals
 The goal is to make a server which allows file upload and returns a uuid v4 as a reference to that file.  
 Access to files is done through a route, so the server can keep track of the latest access for each file.  
